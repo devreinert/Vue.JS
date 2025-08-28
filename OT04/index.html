@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Vue.JS</title>
+    <style>
+        .red{
+            color: red;
+        }
+
+        .green{
+            color: green;
+        }
+
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+        <img
+        v-bind:src="'https://br.vuejs.org/images/logo.png'"
+        v-bind:alt="'Vuejs is awesome!'"
+        v-bind:data-img-large="'https://br.vuejs.org/images/logo.png'" v-bind:alt="'Vuejs is awesome!'"
+        >
+        <p :class="classe"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis totam ea amet
+             deserunt, eos natus error dolores nihil sunt molestiae 
+             necessitatibus optio quas quidem pariatur officiis facere quibusdam dolorum quia?</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                titulo: 'Aprendendo Vue JS',
+                classe: 'red'
+            }
+        })
+    </script>
+    
+</body>
+</html>
